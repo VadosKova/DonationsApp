@@ -22,4 +22,13 @@ export default function DonateForm() {
     });
     alert("Donation sent!");
   };
+
+  return (
+    <div>
+      <input placeholder="ETH" onChange={(e) => setAmount(e.target.value)} />
+      <input placeholder="Message" onChange={(e) => setMessage(e.target.value)} />
+      <input placeholder="Media link" onChange={(e) => setLink(e.target.value)} />
+      <button onClick={handleDonate}>Donate</button>
+    </div>
+  );
 }
