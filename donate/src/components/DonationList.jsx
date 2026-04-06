@@ -10,12 +10,21 @@ export default function DonationList() {
   }, []);
 
   return (
-    <div>
+    <div className="card">
+      <h2>Recent Donations</h2>
       {donations.map((d, i) => (
-        <div key={i}>
-          <p>{d.amount} ETH</p>
+        <div className="donation" key={i}>
+          <p><b>{d.amount} ETH</b></p>
           <p>{d.message}</p>
-          <a href={d.mediaLink}>{d.mediaLink}</a>
+          {d.mediaLink && (
+            <a
+              className="link"
+              href={d.mediaLink}
+              target="_blank"
+            >
+              Open media
+            </a>
+          )}
         </div>
       ))}
     </div>
