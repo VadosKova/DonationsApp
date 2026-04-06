@@ -4,8 +4,8 @@ import './App.css'
 
 export default function App() {
   return (
-    <div>
-      <h1>Crypto Donate</h1>
+    <div className="container">
+      <h1 style={{ textAlign: "center" }}>Crypto Donate</h1>
       <DonateForm />
       <DonationList />
     </div>

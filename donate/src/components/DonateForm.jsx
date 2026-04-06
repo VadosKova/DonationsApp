@@ -40,11 +40,15 @@ export default function DonateForm() {
   };
 
   return (
-    <div>
-      <input placeholder="ETH" onChange={(e) => setAmount(e.target.value)} />
-      <input placeholder="Message" onChange={(e) => setMessage(e.target.value)} />
-      <input placeholder="Media link" onChange={(e) => setLink(e.target.value)} />
-      <button onClick={handleDonate}>Donate</button>
+    <div className="card">
+      <h2>Send Donation</h2>
+      <input placeholder="Amount (ETH)" value={amount} onChange={(e) => setAmount(e.target.value)} />
+      <input placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} />
+      <input placeholder="Media link" value={link} onChange={(e) => setLink(e.target.value)} />
+
+      <button onClick={handleDonate} disabled={loading}>
+        {loading ? "Processing..." : "Donate ETH"}
+      </button>
     </div>
   );
 }
