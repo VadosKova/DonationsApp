@@ -1,5 +1,5 @@
-import DonateForm from "../components/DonateForm";
-import DonationList from "../components/DonationList";
+import DonateForm from "./components/DonateForm";
+import DonationList from "./components/DonationList";
 import './App.css'
 
 export default function App() {

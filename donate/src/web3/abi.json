@@ -1,0 +1,12 @@
+[
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_message", "type": "string" },
+      { "internalType": "string", "name": "_mediaLink", "type": "string" }
+    ],
+    "name": "donate",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
