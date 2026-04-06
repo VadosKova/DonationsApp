@@ -1,24 +1,36 @@
-body {
+* {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #fff;
+  line-height: 1.5;
 }
 
 .container {
   width: 100%;
-  min-height: 100vh;
-  padding: 50px 20px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 20px;
 }
 
 .card {
+  width: 100%;
+  max-width: 500px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   margin-bottom: 20px;
@@ -31,7 +43,8 @@ input {
   border-radius: 10px;
   border: none;
   outline: none;
-  background: rgba(255,255,255,0.1);
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
 }
 
@@ -44,6 +57,7 @@ button {
   background: linear-gradient(135deg, #ff0000, #8b5cf6);
   color: white;
   font-weight: bold;
+  font-size: 20px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -59,6 +73,6 @@ button:hover {
 }
 
 .link {
-  color: #df0f0f;
+  color: #dfc30f;
   text-decoration: none;
 }
