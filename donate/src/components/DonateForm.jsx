@@ -6,5 +6,20 @@ export default function DonateForm() {
   const [message, setMessage] = useState("");
   const [link, setLink] = useState("");
 
-  
+  const handleDonate = async () => {
+    const tx = await donate(amount, message, link);
+
+    await fetch("http://localhost:5000/api/donations", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        donorAddress: window.ethereum.selectedAddress,
+        amount,
+        message,
+        mediaLink: link,
+        txHash: tx.hash,
+      }),
+    });
+    alert("Donation sent!");
+  };
 }
